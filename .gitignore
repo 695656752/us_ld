@@ -1,0 +1,6 @@
+.htaccess
+.user.ini
+.DS_Store
+/vendor/
+/node_modules/
+.git

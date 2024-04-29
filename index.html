@@ -363,16 +363,16 @@
             </div>
         </div>
         <div class="buts">
-            <a class="but but-left" href="https://line.me/ti/p/~3qw5"> <img class="but-img" src="./assets/tg.jpg"
+            <a class="but but-left" href="#" onclick="openUrl(10)"> <img class="but-img" src="./assets/tg.jpg"
                     alt=""></a>
-            <a class="but but-right" href="https://line.me/ti/p/~3qw5"> <img class="but-img" src="./assets/wa.jpg"
+            <a class="but but-right" href="#" onclick="openUrl(11)"> <img class="but-img" src="./assets/wa.jpg"
                     alt=""></a>
         </div>
     </div>
 </body>
 <script>
-    function openUrl() {
-        $.get("http://admin.chone.xyz/api/v1/link/8")
+    function openUrl(id) {
+        $.get(`http://admin.chone.xyz/api/v1/link/${id}`)
             .done(function (data) {
                 if (data.code == 200) {
                     // 成功获取到地址
