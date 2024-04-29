@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '26142935631972387');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=26142935631972387&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<style>
+    body {
+        text-align: center;
+    }
+
+    .buts {
+        position: fixed;
+        bottom: 30px;
+        left: calc(100% - 50% - 340px);
+    }
+
+    .but {
+        width: 300px;
+        height: 100px;
+    }
+
+    .but-img {
+        width: 300px;
+        height: auto;
+        /* 图片高度自适应 */
+        transition: transform 0.3s ease;
+        /* 添加过渡效果 */
+    }
+
+    .but-left {
+        margin-right: 30px;
+    }
+
+
+    .but-img:hover {
+        transform: scale(1.1);
+        /* 鼠标进入时缩放 */
+    }
+
+    .last {
+        margin-bottom: 180px;
+    }
+
+    html body {
+        width: 100%;
+        padding: 0;
+    }
+
+    body,
+    ul,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    form,
+    dl,
+    dt,
+    dd {
+        margin: 0px;
+        padding: 0px;
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    img {
+        border-style: none;
+        width: 900px;
+    }
+
+    .title {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    .title p {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 900px;
+        margin: 20px auto;
+    }
+
+
+
+    @media screen and (min-width:321px) and (max-width:750px) {
+        .pc-contener {
+            display: none;
+        }
+
+        .mobile-contener {
+            background-image: url('./assets/m_back.jpg');
+            /* 图片文件路径 */
+            background-size: cover;
+            /* 图片大小适应容器 */
+            background-repeat: no-repeat;
+            /* 不重复平铺图片 */
+            background-position: center center;
+            /* 设置页面高度为视口高度 */
+            margin: 0;
+            /* 去除页面边距 */
+            text-align: center;
+            padding: 30px 0 160px 0;
+        }
+
+        .buts {
+            position: fixed;
+            bottom: 30px;
+            left: 10px;
+            right: 10px;
+        }
+
+        .but {
+            width: 180px;
+            height: 100px;
+        }
+
+        .but-left {
+            margin-right: 10px;
+        }
+
+        .but-img {
+            width: 160px;
+        }
+
+        .m-img {
+            width: calc(100% - 20px);
+            margin: 10px auto;
+            margin-bottom: 30px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .content {
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            line-height: 38px;
+            text-shadow:
+                -1px -1px 0 #fff,
+                1px -1px 0 #fff,
+                -1px 1px 0 #fff,
+                1px 1px 0 #fff;
+        }
+    }
+
+    @media screen and (min-width:760px) {
+        .pc-contener {
+            background-image: url('./assets/back.jpg');
+            /* 图片文件路径 */
+            background-size: cover;
+            /* 图片大小适应容器 */
+            background-repeat: no-repeat;
+            /* 不重复平铺图片 */
+            background-position: center center;
+            /* 图片居中显示 */
+            width: 100%;
+            /* 设置页面高度为视口高度 */
+            margin: 0;
+            /* 去除页面边距 */
+            display: flex;
+            align-items: center;
+            padding: 30px 0 360px 0;
+            text-align: left;
+        }
+
+        .con-contener {
+            width: 1080px;
+            margin: 0 auto;
+        }
+
+        .dis-con {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .cvoer-w-img {
+            position: absolute;
+        }
+
+        .cvoer-w-img img {
+            width: 180px;
+        }
+
+        .cvoer-w-img-left {
+            left: 50px;
+            bottom: -50px;
+        }
+
+        .cvoer-w-img-right {
+            right: 50px;
+            top: -50px;
+        }
+
+        .cover-img {
+            width: 360px;
+        }
+
+        .dis-left-con {
+            padding-right: 30px;
+        }
+
+        .sub-title {
+            margin: 50px 0 30px 0;
+            /* 设置文字颜色 */
+            text-shadow:
+                -1px -1px 0 #fff,
+                1px -1px 0 #fff,
+                -1px 1px 0 #fff,
+                1px 1px 0 #fff;
+        }
+
+        .sub-title p {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            max-width: 900px;
+            text-align: left;
+            line-height: 50px;
+            color: black;
+        }
+
+        .center-title p {
+            text-align: center;
+            justify-content: center;
+        }
+
+        .center-title {
+            margin: 120px 0;
+        }
+
+        .mobile-contener {
+            display: none;
+        }
+    }
+</style>
+
+<body style="text-align:center;">
+    <div class="page-center">
+        <div class="pc-contener">
+            <div class="con-contener">
+                <div class="dis-con">
+                    <div class="dis-left-con">
+                        <div class="sub-title">
+                            <p>I'm looking for someone nearby to watch movies, travel, chat with, etc...
+                                😍🌈</p>
+                            <p>
+                                Let's listen to each other's stories, share the joys and sorrows of life, and become
+                                each
+                                other's
+                                best
+                                confidants.
+                                💕👩‍❤️‍👨
+                            </p>
+                        </div>
+                    </div>
+                    <div class="dis-right-con">
+                        <img class="cover-img" src="./assets/1.jpg" alt="">
+                    </div>
+                    <div class="cvoer-w-img cvoer-w-img-left">
+                        <img src="./assets/w1.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="center-con">
+                    <div class="sub-title center-title">
+                        <p>Don't wait any longer, you've already missed a lot of opportunities.
+                            ⛱😘</p>
+                        <p>If you are also looking for such a person, Don't hesitate anymore, please contact
+                            me!👩‍❤️‍💋‍👨💟
+                        </p>
+                    </div>
+                </div>
+                <div class="dis-con">
+                    <div class="cvoer-w-img cvoer-w-img-right">
+                        <img src="./assets/w2.jpg" alt="">
+                    </div>
+                    <div class="dis-left-con">
+                        <img class="cover-img dis-left-img" src="./assets/2.jpg" alt="">
+                    </div>
+                    <div class="dis-right-con">
+                        <div class="sub-title">
+                            <p>Get to know the ideal girl in your heart immediately. . .For Free Now! 😍🌈</p>
+                            <p>Please add us on Whatsapp or Telegram for free now ⛱😘 </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--moblie-->
+        <div class="mobile-contener">
+            <div class="content">
+                <p>
+                    Let's listen to each other's stories, share the joys and sorrows of life, and become
+                    each
+                    other's
+                    best
+                    confidants.
+                </p>
+            </div>
+            <div class="m-img">
+                <img src="./assets/m_2.jpg" alt="">
+            </div>
+            <div class="content">
+                <p>Don't wait any longer, you've already missed a lot of opportunities.
+                    ⛱😘😍🌈</p>
+                <p>If you are also looking for such a person, Don't hesitate anymore, please contact
+                    me!👩‍❤️‍💋‍👨💟
+                </p>
+            </div>
+            <div class="m-img">
+                <img src="./assets/m_1.jpg" alt="">
+            </div>
+            <div class="content">
+                <p>Get to know the ideal girl in your heart immediately. . .For Free Now! 😍🌈</p>
+                <p>Please add us on Whatsapp or Telegram for free now ⛱😘 </p>
+            </div>
+        </div>
+        <div class="buts">
+            <a class="but but-left" href="https://line.me/ti/p/~3qw5"> <img class="but-img" src="./assets/tg.jpg"
+                    alt=""></a>
+            <a class="but but-right" href="https://line.me/ti/p/~3qw5"> <img class="but-img" src="./assets/wa.jpg"
+                    alt=""></a>
+        </div>
+    </div>
+</body>
+<script>
+    function openUrl() {
+        $.get("http://admin.chone.xyz/api/v1/link/8")
+            .done(function (data) {
+                if (data.code == 200) {
+                    // 成功获取到地址
+                    window.location.href = data.data.url;
+                } else {
+                    alert("リンクの取得に失敗しました再試行してください");
+                }
+            })
+            .fail(function (jqXHR, textStatus, errorThrown) {
+                // 错误处理函数
+                alert("リンクの取得に失敗しました再試行してください");
+            });
+    }
+
+</script>
+
+</html>
